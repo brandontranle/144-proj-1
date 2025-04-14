@@ -8,6 +8,9 @@
     --footer-text-color: white;
     --shadow: rgba(0, 0, 0, 0.4);
 
+
+    --tertiary-background-color: #f0f0f0;
+
     /* light mode */
     --light-background-color: #ffffff;
     --light-shadow: rgba(0, 0, 0, 0.1);
@@ -98,6 +101,14 @@ nav ul {
     gap: 2rem;
 }
 
+nav ul li {
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color var(--transition-speed);
+}
+
 nav ul li a{
     display: inline-block;
     color: var(--light-text-color);
@@ -107,9 +118,9 @@ nav ul li a{
 #menu-toggle, .menu-toggle {
     display: none;
     cursor: pointer;
-    background-color: none;
+    background-color: transparent;
     border: none;
-    width: 30px;
+    width: 50px;
     height: 30px;
     position: relative;
 }
@@ -126,13 +137,16 @@ nav ul li a{
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--header-text-color);
+    background-color: var(--tertiary-background-color);
     margin: 5px 0;
     transition: transform var(--transition-speed), opacity var(--transition-speed);
 }
 
+
+/* hamburger menu */
 #menu-toggle span:nth-child(1), .menu-toggle span:nth-child(1) {
     top: 0;
+    transform: translateY(-50%) rotate(0deg);
 }
 #menu-toggle span:nth-child(2), .menu-toggle span:nth-child(2) {
     top: 50%;
@@ -151,9 +165,40 @@ nav ul li a{
     nav ul {
         display: none;
     }
+
+    nav.active ul li {
+        border-bottom:rgba(0, 0, 0, 0.4);
+        height: 100%;
+    }
+
+    .navbar ul {
+        display: none;
+        gap: 0;
+    }
+
+    .navbar .theme-toggle {
+        display: block;
+    }
+
+    .navbar {
+        margin-left: auto
+    }
+
+    .navbar-item {
+        /* center <a> elements in the navbar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
     
     #menu-toggle, .menu-toggle {
         display: block;
+    }
+
+    .navbar .flex-container {
+        justify-content: none;
     }
 
     nav.active ul {
@@ -162,9 +207,21 @@ nav ul li a{
         position: absolute;
         top: var(--header-height);
         left: 0;
+        height: 250px;
         width: 100%;
         padding: 20px;
         box-shadow: 0 5px 10px var(--shadow);
-        border-top: 1px solid blue; /* temp*/
+        background-color: var(--background-color);
+        transition: all var(--transition-speed);
     }
+
+    nav.active ul li:hover {
+        background-color: var(--tertiary-background-color);
+    }
+
+    .navbar.active .flex-container{
+        padding: 0;
+    }
+    
+
 }
