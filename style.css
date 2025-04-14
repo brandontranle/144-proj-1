@@ -1,0 +1,107 @@
+/* default styles for the page (use root) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333;
+    --header-background-color: #4CAF50;
+    --header-text-color: white;
+    --footer-background-color: #333;
+    --footer-text-color: white;
+    --shadow: rgba(0, 0, 0, 0.4);
+
+    /* light mode */
+    --light-background-color: #ffffff;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --light-text-color: #333;
+
+
+    /* dark mode */
+    --dark-background-color: #121212;
+    --dark-shadow: rgba(255, 255, 255, 0.1);
+    --dark-text-color: #ffffff;
+
+    --header-height: 70px;
+    --container-width: 1200px;
+    
+    --transition-speed: 0.3s;
+    --font: 'Space Grotesk', sans-serif;
+
+}
+
+main {
+    padding-top: calc(var(--header-height) + 30px);
+    background-color: var(--background-color);
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;   
+  height: 100%; 
+}
+
+.flex-col-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;    
+}
+
+/* navbar styles v*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    box-shadow: 0 4px 8px var(--shadow);
+
+
+}
+
+#theme-toggle, .theme-toggle {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--header-text-color);
+    border: none;
+    font-size: 18px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a{
+    display: inline-block;
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+
