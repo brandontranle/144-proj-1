@@ -32,17 +32,22 @@
 
 main {
     padding-top: calc(var(--header-height) + 30px);
-    background-color: var(--background-color);
+    background-color: none;
 }
 
 body {
     font-family: var(--font);
-    background-color: var(--background-color);
+    background-color: none;
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    height: 100%;
     line-height: 1.6;
     box-sizing: border-box;
+    background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
@@ -75,6 +80,7 @@ header {
     width: 100%;
     height: var(--header-height);
     box-shadow: 0 4px 8px var(--shadow);
+    background-color: var(--background-color)
 
 
 }
