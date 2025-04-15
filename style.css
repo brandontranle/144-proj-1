@@ -7,6 +7,8 @@
     --footer-background-color: #333;
     --footer-text-color: white;
     --shadow: rgba(0, 0, 0, 0.4);
+    --border-radius: 5px;
+    --text: #333;
 
 
     --tertiary-background-color: #f0f0f0;
@@ -27,6 +29,9 @@
     
     --transition-speed: 0.3s;
     --font: 'Space Grotesk', sans-serif;
+
+    --gradient-primary: linear-gradient(90deg, #FF5ED2, #A18CD1);
+
 
 }
 
@@ -164,6 +169,191 @@ nav ul li a{
 }
 
 
+
+/* hero content*/
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+    gap: 20px;
+  }
+
+   
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(139, 139, 139, 0.1);
+    color: var(--primary);
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary);
+    font-family: var(--font-code);
+  }
+  
+  .hero-info h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-info p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    text-align: center;
+    border: none;
+    font-size: 1.1rem;
+    font-family: var(--font-main);
+  }
+  
+  .btn.primary {
+    background-image: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  .btn.primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: var(--border-radius);
+    outline:#121212;
+    text-decoration: none;
+  }
+  
+  .btn.secondary:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+
+.terminal {
+    background-color: var(--bg-terminal);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 300px;
+    font-family: var(--font-code);
+    border: 1px solid var(--border);
+    color: white;
+    background-color: #202020;
+  }
+  
+  .terminal-header {
+    background-color: #2d2d2d;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;;
+  }
+
+     .terminal-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+  .terminal-body{
+    padding: 10px;
+    color: #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  
+  .terminal-button:nth-child(1) {
+    background-color: #ff5f56;
+  }
+  
+  .terminal-button:nth-child(2) {
+    background-color: #ffbd2e;
+  }
+  
+  .terminal-button:nth-child(3) {
+    background-color: #27c93f;
+  }
+
+  .line {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .prompt {
+    color: var(--primary);
+    margin-right: 8px;
+  }
+  
+  .command {
+    color: #ddd;
+  }
+  
+  .cursor {
+    color: var(--primary);
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+  
+  .output {
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  
+  .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+
+
+  
 @media (max-width: 768px) {
 
 
@@ -228,6 +418,15 @@ nav ul li a{
     .navbar.active .flex-container{
         padding: 0;
     }
+
+
+    /* hero stuff*/
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
     
 
 }
+
