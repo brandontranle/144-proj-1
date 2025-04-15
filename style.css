@@ -31,6 +31,7 @@
     --font: 'Space Grotesk', sans-serif;
 
     --gradient-primary: linear-gradient(90deg, #FF5ED2, #A18CD1);
+    --gradient-secondary: linear-gradient(90deg, #FF5ED2, #A18CD1);
 
 
 }
@@ -392,6 +393,35 @@ nav ul li a{
     50% { opacity: 0; }
   }
   
+
+/* about section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.hexagon {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: var(--gradient-primary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hexagon img {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
 
 
   
