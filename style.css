@@ -51,10 +51,13 @@ body {
     line-height: 1.6;
     box-sizing: border-box;
     background-size: 40px 40px;
+    /* additional adjustments*/
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.8);
   background-image:
     linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    linear-gradient(to bottom, grey 1px, transparent 1px); /* grid in the background */
+    transition: background-color var(--transition-speed), color var(--transition-speed); 
 }
 
 h2 {
@@ -399,7 +402,7 @@ nav ul li a{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 40px;
-    margin-top: 50px;
+    margin-top: 30px;
     align-items: center;
 }
 
