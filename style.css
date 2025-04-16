@@ -70,6 +70,24 @@ p {
     margin-bottom: 1.5rem;
 }
 
+
+/* section styles */
+#hero {
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+
+#about {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 .flex-container {
   display: flex;
   align-items: center;
@@ -186,15 +204,6 @@ nav ul li a{
 
 
 /* hero content*/
-
-#hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-bottom: 0;
-    gap: 20px;
-  }
-
    
   .hero-info {
     display: flex;
