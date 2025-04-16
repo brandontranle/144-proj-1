@@ -777,6 +777,57 @@ nav ul li a{
 }
 
 
+/* education section */
+.education-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.education-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: 0 5px 15px var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.education-logo {
+  flex-shrink: 0;
+}
+
+.education-details h3 {
+  margin-bottom: 5px;
+}
+
+.degree {
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
 
 
 
@@ -789,7 +840,11 @@ nav ul li a{
   
 @media (max-width: 768px) {
 
-
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
     nav ul {
         display: none;
