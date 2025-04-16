@@ -1,5 +1,7 @@
 const mobileMenuBtn = document.querySelector('.menu-toggle' || '#menu-toggle');
 const nav = document.querySelector('.navbar');
+const moreExpBtn = document.getElementById('show-more-experiences');
+const moreExp = document.getElementById('more-experiences');
 
 
 const terminalOutput = document.getElementById('terminal-output');
@@ -10,6 +12,18 @@ const cursor = document.getElementById('cursor');
 mobileMenuBtn.addEventListener('click', function () {
     mobileMenuBtn.classList.toggle('active');
     nav.classList.toggle('active');
+});
+
+moreExpBtn.addEventListener('click', function () {
+  console.log("clicked");
+  // remove Hidden attribute from the div
+  moreExp.classList.toggle('hidden');
+
+  if (moreExp.classList.contains('hidden')) {
+    moreExpBtn.innerText = 'Show More Experiences';
+  } else {
+    moreExpBtn.innerText = 'Show Less Experiences';
+  }
 });
 
 
