@@ -99,7 +99,7 @@ p {
   }
 
 
-#about {
+#about, #skills, #education {
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -665,11 +665,6 @@ nav ul li a{
 
 
 /* skills section*/
-#skills {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
