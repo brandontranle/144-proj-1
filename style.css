@@ -710,6 +710,20 @@ p > .emphasized {
     text-align: left;
   }
 
+  #more-experiences {
+    max-height: 0;             
+    opacity: 0;                 
+    overflow: hidden;  
+    transition:
+      max-height 0.5s ease-out,
+      opacity      0.3s ease-out;
+  }
+  
+  #more-experiences.expanded {
+    max-height: 2000px; 
+    opacity: 1;
+  }
+
   .show-more {
     background-image: var(--gradient-primary);
     padding: 10px 20px;

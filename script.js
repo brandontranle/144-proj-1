@@ -27,11 +27,10 @@ document.querySelectorAll('.navbar-item').forEach(link => {
 
 
 moreExpBtn.addEventListener('click', function () {
-  console.log("clicked");
   // remove Hidden attribute from the div
-  moreExp.classList.toggle('hidden');
+  moreExp.classList.toggle('expanded');
 
-  if (moreExp.classList.contains('hidden')) {
+  if (moreExp.classList.contains('expanded')) {
     moreExpBtn.innerText = 'Show More Experiences';
   } else {
     moreExpBtn.innerText = 'Show Less Experiences';
