@@ -172,16 +172,18 @@ nav ul {
 
 nav ul li {
     position: relative;
-    padding: 10px 0;
     width: 100%;
     text-align: center;
     transition: background-color var(--transition-speed);
 }
 
 nav ul li a{
+    padding: 10px 0;
     display: inline-block;
     color: var(--light-text-color);
     text-decoration: none;
+    height: 100%;
+    width: 100%;
 }
 
 #menu-toggle, .menu-toggle {
@@ -972,6 +974,10 @@ footer {
         display: none;
     }
 
+    #theme-toggle, .theme-toggle {
+        margin-right: 15px;
+    }
+
     nav.active ul li {
         border-bottom:rgba(0, 0, 0, 0.4);
         height: 100%;
@@ -1023,6 +1029,7 @@ footer {
 
     nav.active ul li:hover {
         background-color: var(--tertiary-background-color);
+        cursor: pointer;
     }
 
     .navbar.active .flex-container{

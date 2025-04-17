@@ -18,6 +18,14 @@ mobileMenuBtn.addEventListener('click', function () {
     nav.classList.toggle('active');
 });
 
+document.querySelectorAll('.navbar-item').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenuBtn.classList.remove('active');
+    nav.classList.remove('active');
+  });
+});
+
+
 moreExpBtn.addEventListener('click', function () {
   console.log("clicked");
   // remove Hidden attribute from the div
@@ -95,6 +103,8 @@ function updateTerminalSize() {
 }
 
 window.addEventListener('resize', updateTerminalSize);
+
+
 
 
 
