@@ -328,26 +328,61 @@
 <section id="education" class="container">
     <h2 class="section-title">Education<span class="blinker">_</span></h2>
     <div class="education-container">
-        <div class="education-card">
+        <div class="education-card" onclick="toggleDropdown('ucla-dropdown')">
             <div class="education-logo">
-                <img src="/svgs/logo_UCLA_blue_boxed.svg" alt="UCLA Logo" class="edu-logo">
+                <img src="logo_UCLA_blue_boxed.png" alt="UCLA Logo" class="edu-logo">
             </div>
             <div class="education-details">
                 <h3 >University of California, Los Angeles</h3>
                 <p class="degree">🎓 Bachelor of Science in Computer Science</p>
                 <p class="date">📅 Sep. 2022 – Jun. 2026</p>
+                <div class="dropdown-icon">▼</div>
+            </div>
+            <div id="ucla-dropdown" class="edu-dropdown">
+                <ul class="education-highlights">
+                    <li>Relevant Coursework:
+                        <ul class="custom-bullet-list" data-category="courses">
+                            <li>ECE 117: Computer System Security</li>
+                            <li>COM SCI 118: Computer Network Fundamentals</li>
+                            <li>COM SCI 180: Introduction to Algorithms and Complexity</li>
+                        </ul>
+                    </li>
+                    <li>Additional Activities:
+                        <ul class="custom-bullet-list" data-category="activities">
+                            <li data-category="lab"> Security & Privacy Lab (Dr.Tian)</li>
+                            <li data-category="club"> ACM TeachLA</li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="education-card">
+        <div class="education-card" onclick="toggleDropdown('mpc-dropdown')">
             <div class="education-logo">
-                <div class="edu-hexagon">
-                    <img src="/mpc-logo.webp" alt="UCLA Logo" class="edu-logo">
-                </div>
+                    <img src="/mpc-logo.jpg" alt="UCLA Logo" class="mpc-logo">
             </div>
             <div class="education-details">
                 <h3>Monterey Peninsula College</h3>
                 <p class="degree">🎓Associate of Arts in Social Sciences</p>
                 <p class="date">📅 Jun. 2020 – Jun. 2022</p>
+                <div class="dropdown-icon">▼</div>
+            </div>
+            <div id="mpc-dropdown" class="edu-dropdown">
+                <ul class="education-highlights" >
+                    <li>Relevant Coursework:
+                        <ul class="custom-bullet-list" data-category="courses">
+                            <li>CSIS 86: Network Security Fundamentals/Security+ Prep</li>
+                            <li>CSIS 10B: Programming Methods II: Java</li>
+                            <li>CSIS 72B: Configuring Windows Server Hybrid Advanced </li>
+                        </ul>
+                    </li>
+                    <li>Achievements:
+                        <ul class="custom-bullet-list" data-category="achievements" >
+                            <li>GPA: 4.0 / 4.0</li>
+                            <li>Deans Honor List (2020 - 2022)</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

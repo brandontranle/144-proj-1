@@ -106,6 +106,46 @@ window.addEventListener('resize', updateTerminalSize);
 
 
 
+/* edu section js */
+// Function to toggle dropdown visibility independently
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
+  const card = dropdown.closest('.education-card');
+  
+  // Toggle the clicked dropdown only
+  dropdown.classList.toggle('active');
+  
+  // Toggle active class on the parent card
+  card.classList.toggle('active');
+  
+  // Prevent the click event from bubbling up
+  event.stopPropagation();
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.education-card')) {
+      const allDropdowns = document.querySelectorAll('.edu-dropdown');
+      const allCards = document.querySelectorAll('.education-card');
+      
+      allDropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+      });
+      
+      allCards.forEach(card => {
+          card.classList.remove('active');
+      });
+  }
+});
+
+// Prevent dropdown from closing when clicking inside it
+document.querySelectorAll('.edu-dropdown').forEach(dropdown => {
+  dropdown.addEventListener('click', function(event) {
+      event.stopPropagation();
+  });
+});
+
+
 
 
   // call all functions here
