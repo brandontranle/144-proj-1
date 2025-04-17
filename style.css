@@ -65,12 +65,24 @@
     margin: 0;
     padding: 0;
 }
+/* response typography req 9*/
 
 html {
   scroll-behavior: smooth;
-
+  font-size: clamp(14px, 1.2vw, 18px);
 }
 
+h2 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1rem);
+}
+
+h3 {
+  font-size: clamp(0.8rem, 3vw, 1.25rem);
+}
 
 main {
     padding-top: calc(var(--header-height) + 30px);
@@ -135,7 +147,6 @@ body {
 }
 
 h2 {
-    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--text-color);
 }
@@ -300,7 +311,7 @@ nav ul li a{
   }
   
   .hero-info h2 {
-    font-size: 3rem;
+    /*font-size: 3rem; adjust here*/
     line-height: 1.1;
     margin-bottom: 20px;
     background: var(--gradient-primary);
@@ -310,7 +321,7 @@ nav ul li a{
   }
   
   .hero-info p {
-    font-size: 1.25rem;
+    /*font-size: 1.25rem; adjust here*/ 
     margin-bottom: 30px;
   }
   
@@ -1136,6 +1147,7 @@ footer {
 
 
 
+
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
@@ -1231,7 +1243,14 @@ footer {
       text-align: center;
   }
 
-  /* resposive typography */
+  /* for experience section */
+  .card-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+
+  /* resposive typography 
    .hero-info h2 {
       font-size: 2.3rem;
   }
@@ -1250,22 +1269,11 @@ footer {
       padding: 5px 10px;
   }
 
-
-
-
-
-
   .card-description li {
       font-size: 0.8rem;
   }
-  
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.skills-list li {
+      
+  .skills-list li {
     font-size: 0.9rem;
     padding: 5px 0;
 }
@@ -1274,6 +1282,17 @@ footer {
     font-size: 1.2rem;
     position: relative;
 }
+  */
+  
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+
+
 
 .skill-category.certificates {
     grid-column: span 1;
