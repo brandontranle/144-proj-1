@@ -351,8 +351,59 @@
     </div>
 </section>
 <section id="contact" class="container">
-    <h2 class="section-title">Contact Me<span class="blinker">_</span></h2>
-
+    <h2 class="section-title">Contact<span class="blinker">_</span></h2>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>Interested in working together or have questions about security engineering? Feel free to reach out!</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="icon">📧</div>
+                    <a href="mailto:brandonle@ucla.edu">brandonle@ucla.edu</a>
+                </div>
+                <div class="contact-method">
+                    <div class="icon">📱</div>
+                    <a href="tel:8312966761">831-296-6761</a>
+                </div>
+                <div class="contact-method">
+                    <div class="icon">💼</div>
+                    <a href="https://linkedin.com/in/brandon-tran-le" target="_blank" rel="noopener noreferrer">linkedin.com/in/brandon-tran-le</a>
+                </div>
+                <div class="contact-method">
+                    <div class="icon">🌐</div>
+                    <a href="https://brandonle.dev" target="_blank" rel="noopener noreferrer">brandonle.dev</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form">
+                <fieldset>
+                    <legend>Send me a message</legend>
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="security-check">
+                        <label for="security">Security Question: What is 2 + 3? <span class="required">*</span></label>
+                        <input type="number" id="security" name="security" min="0" max="10" required>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </section>
 
 
