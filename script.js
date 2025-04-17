@@ -183,3 +183,38 @@ contactForm.addEventListener('submit', (e) => {
         }, 2000);
       }, 1500);
     });
+
+
+
+
+
+    // Get reference to the dark mode toggle checkbox and label
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const darkModeLabel = document.querySelector('.dark-mode-label');
+
+
+// Initialize the icon based on any saved preference or default state
+function initDarkMode() {
+  // Check if we have a saved preference
+  const darkModePreference = localStorage.getItem('darkMode');
+  
+  if (darkModePreference === 'enabled') {
+    darkModeToggle.checked = true;
+  } else {
+    darkModeToggle.checked = false;
+  }
+ 
+}
+
+// Event listener for the dark mode toggle
+darkModeToggle.addEventListener('change', function() {
+  if (this.checked) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
+  
+});
+
+// Run the initialization when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initDarkMode);
