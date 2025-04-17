@@ -108,7 +108,7 @@ p {
   }
 
 
-#about, #skills, #education {
+#about, #skills, #education, #experience, #contact {
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -925,6 +925,35 @@ input:focus, textarea:focus {
 
 
 
+/* footer */
+footer {
+  background-color: var(--bg-secondary);
+  padding: 40px 0;
+  margin-top: 80px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
 
 
 
@@ -984,7 +1013,7 @@ input:focus, textarea:focus {
         position: absolute;
         top: var(--header-height);
         left: 0;
-        height: 250px;
+        height: 325px;
         width: 100%;
         padding: 20px;
         box-shadow: 0 5px 10px var(--shadow);
