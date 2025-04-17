@@ -9,6 +9,10 @@ const typingText = document.getElementById('typing-text');
 const cursor = document.getElementById('cursor');
 
 
+const contactForm = document.getElementById('contact-form');
+
+
+
 mobileMenuBtn.addEventListener('click', function () {
     mobileMenuBtn.classList.toggle('active');
     nav.classList.toggle('active');
@@ -99,3 +103,34 @@ window.addEventListener('resize', updateTerminalSize);
     loadTerminal();
     updateTerminalSize();
   });
+
+
+
+
+contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const securityAnswer = document.getElementById('security').value;
+      
+      if (securityAnswer !== '5') {
+        alert('Security check failed. Please try again.');
+        return;
+      }
+      
+      // simulate the process
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      setTimeout(() => {
+        contactForm.reset();
+        submitBtn.textContent = 'Message Sent!';
+        
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }, 2000);
+      }, 1500);
+    });
