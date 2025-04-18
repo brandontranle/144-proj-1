@@ -8,22 +8,32 @@ CHOICES
 9a. Text gradients defined by var(--gradient-primary) were used on most headings of <section> elements (i.e. .section-title) and was also included in .emphasized. These gradients were made by clipping the    background into its corresponding text. 
 9b. clamp() was used to make responsive typography by setting font sizes of specific elements (e.g., html, h2, p, button a, .skills-grid li, h3, .emphasized, .output ).
 12. I used CSS gradients (var(--gradient-primary)) for backgrounds on section titles, the hexagon in my about section, and buttons; I also applied box-shadow and text-shadow on cards, the terminal in the hero section, and buttons to create depth; I also used CSS transforms (translateY) for hover interactions on .btn and .card; implemented gradient borders on skill-category elements using border-image. 
-18.
-19.
+18. For 18a: I embedded an inline SVG (a gradient-filled circle) directly before each section title for a decorative effect.
+    For 18b: I used (::before, ::after) for decorative text elements, including custom bullets on nested lists, underlines on section titles, underline hover effect on the navbar links, timeline markers, and the dark‑mode label icon.
+19. CSS gradients and box-shadow/text-shadow applied across multiple components (hero, cards, buttons) to enhance visual styling.
 
 JAVASCRIPT
 (Please tells us what the JavaScript does e.g. "click on the green button and it does the following...")
 ----------
 1. Clicking the .menu-toggle element (i.e. hamburger menu) toggles the navigation menu by adding or removing the `active` class on the navbar / nav element and button. 
-2. Similar to the feature above, clicking the "Show More Experiences" button toggles the expanded experience section by adding or removing the `expanded` class. 
-3. 
-
-
+2. Clicking any navbar link removes the ‘active’ classes from the menu button and navbar, closing the mobile menu after a selection.
+3. Similar to the features above, clicking the "Show More Experiences" button toggles the expanded experience section by adding or removing the `expanded` class. 
+3. `loadTerminal()` cycles through predefined commands (`whoami`, `ls -l ./skills`, `cat about.md`, `sudo ./welcome.sh`), simulating a typing effect and displaying corresponding outputs in the terminal area.
+4. `updateTerminalSize()` computes the terminal’s dimensions (columns × rows) based on its container size and updates the terminal title (e.g. “brandonle — -zsh — 80 x 24”) whenever the window is resized. ( I did this to mimic the realism of the mac terminal!)
+5. In the education section, `toggleDropdown(id)` toggles the ‘active’ class on a specific dropdown and its parent card to show or hide detailed information. In other words, click on an education card to see more details about my education at X school. 
+6. The contact form simulates the correctness of sending a message with a mini CAPTCHA (2 + 5). On `contactForm` submission, the default action is prevented, the security question answer is validated, and an alert is shown if the answer is incorrect, aborting the “send.” Otherwise, fi the security answer is correct, the submit button is disabled and labeled “Sending…”. Then, the form resets after 1.5s with “Message Sent!”, and then the button re‑enables with its original text (i.e. "Send Message") after another 2s.
+7. I implemented theme preference feature that utilizes a client's local storage. `initDarkMode()` reads the ‘darkMode’ preference from `localStorage` and sets the dark‑mode toggle checkbox to match the saved state. The dark‑mode toggle’s `change` listener updates `localStorage` with “enabled” or “disabled” when the user toggles dark mode.
+8. To incorporate everything together, a `DOMContentLoaded` listener initializes all interactive features by calling `loadTerminal()`, `updateTerminalSize()`, and `initDarkMode()` once the page is ready.
 
 NOTES TO STAFF
 (If there is anything you need to tell us, please use the section below)
 ---------------
-For requirement 13: I fulfilled this query in my "Skills" section where I used a CSS grid and two device breakpoints. By default, the CSS grid has 3 columns and 3 rows, with one of them having an element (i.e. the certificates list) that spans all a row at the same time. As the page shrinks, the columns and rows will decrease by 1 until it reaches the optimal mobile dimensions (i.e. max-width:468px), where it will only showcase 1 square at a time. 
+For requirement 11: I used a picture of myself in my "about" section where I implemeneted responsive behavior by setting the max-width to 500px and as the screen decreased to the next device breakpoint, it would then change to max-width: 300px, which I had chosen based on trial and error.
+
+For requirement 13: I fulfilled this query in my "Skills" section where I used a CSS grid and two device breakpoints. By default, the CSS grid has 3 columns and 3 rows, with one of them having an element (i.e. the certificates list) that spans all a row at the same time. As the page shrinks, the columns and rows will decrease by 1 until it reaches the optimal mobile dimensions (i.e. max-width:468px), where it will 
+only showcase 1 square at a time. 
+
+For requirement 14: Flexboxes are used for most of my section formatting. See the class definition "flex-container".
 
 For requirement 15: I fulfilled this query by modifying an <a> element with class "logo-link", where I modified the block level display to become a flex display instead. 
 
