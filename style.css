@@ -445,6 +445,7 @@ nav ul li a{
     margin-bottom: 40px;
     padding-bottom: 10px;
     display: inline-block;
+    font-variant: small-caps;
   }
 
   .section-title::after {
@@ -541,6 +542,11 @@ nav ul li a{
   max-width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* select the 3rd paragraph in the about section */
+.about-desc p:nth-of-type(3) {
+  font-style: italic;
 }
 
 p > .emphasized {
@@ -1280,9 +1286,7 @@ footer {
       text-align: center;
   }
 
-  about-desc:nth-child(3) {
-      font-style: italic;
-  }
+  
 
   /* for experience section */
   .card-details {
