@@ -1145,6 +1145,34 @@ footer {
   gap: 20px;
 }
 
+.contact-method a {
+  padding: 2px 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all var(--transition-speed);
+}
+
+
+/* req 20 */
+.contact-methods a:link:hover {
+  animation: jump 0.6s ease infinite;
+  color: var(--text-muted);
+}
+
+.contact-methods a:visited {
+  transition: padding-left 0.2s ease;
+  color: var(--text-muted);
+}
+.contact-methods a:visited:hover {
+  color: var(--terminal-green);
+}
+
+@keyframes jump {
+  0%, 100%   { transform: translateY(0); }
+  50%        { transform: translateY(-5px); }
+}
+
 
 
 @media (max-width: 480px) {
@@ -1153,8 +1181,6 @@ footer {
   }
 }
 
-
-  
 @media (max-width: 768px) {
 
 
