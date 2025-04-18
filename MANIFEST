@@ -7,9 +7,9 @@ CHOICES
 -------
 9a. Text gradients defined by var(--gradient-primary) were used on most headings of <section> elements (i.e. .section-title) and was also included in .emphasized. These gradients were made by clipping the    background into its corresponding text. 
 9b. clamp() was used to make responsive typography by setting font sizes of specific elements (e.g., html, h2, p, button a, .skills-grid li, h3, .emphasized, .output ).
-12. I used CSS gradients (var(--gradient-primary)) for backgrounds on section titles, the hexagon in my about section, and buttons; I also applied box-shadow and text-shadow on cards, the terminal in the hero section, and buttons to create depth; I also used CSS transforms (translateY) for hover interactions on .btn and .card; implemented gradient borders on skill-category elements using border-image. 
+12. I used linear CSS gradients (var(--gradient-primary)) for backgrounds on section titles, the hexagon in my about section, and buttons; I also applied box-shadow and text-shadow on cards, the terminal in the hero section, and buttons to create depth; I also used CSS transforms (translateY) for hover interactions on .btn and .card; implemented gradient borders on skill-category elements using border-image. 
 18. For 18a: I embedded an inline SVG (a gradient-filled circle) directly before each section title for a decorative effect.
-    For 18b: I used (::before, ::after) for decorative text elements, including custom bullets on nested lists, underlines on section titles, underline hover effect on the navbar links, timeline markers, and the dark‑mode label icon.
+    For 18b: I used (::before, ::after) for decorative text elements, including custom bullets on nested lists in my "education" section, underlines on section titles, underline hover effect on the navbar links, timeline markers, and the dark‑mode label icon.
 19. CSS gradients and box-shadow/text-shadow applied across multiple components (hero, cards, buttons) to enhance visual styling.
 
 JAVASCRIPT
@@ -28,6 +28,8 @@ JAVASCRIPT
 NOTES TO STAFF
 (If there is anything you need to tell us, please use the section below)
 ---------------
+For requirement 7: Please click on one of the education cards to see my nested list!
+
 For requirement 11: I used a picture of myself in my "about" section where I implemeneted responsive behavior by setting the max-width to 500px and as the screen decreased to the next device breakpoint, it would then change to max-width: 300px, which I had chosen based on trial and error.
 
 For requirement 13: I fulfilled this query in my "Skills" section where I used a CSS grid and two device breakpoints. By default, the CSS grid has 3 columns and 3 rows, with one of them having an element (i.e. the certificates list) that spans all a row at the same time. As the page shrinks, the columns and rows will decrease by 1 until it reaches the optimal mobile dimensions (i.e. max-width:468px), where it will 
@@ -38,7 +40,6 @@ For requirement 14: Flexboxes are used for most of my section formatting. See th
 For requirement 15: I fulfilled this query by modifying an <a> element with class "logo-link", where I modified the block level display to become a flex display instead. 
 
 For requirement 20: I made it so that when a new visitor hovers over the contact or footer links, the text will display in the --text-muted color, and once they visit the links, the text will turn --text-muted, and when hovering on the visited link, the text will turn --terminal-green. Additionally, the links will perform the "jump" animation I created when hovered on. 
-
 
 ONLY modify this section if you implemented the requirements across 2 or more files.
 Otherwise, submit this file as is. PLEASE do not delete anything from this file.
