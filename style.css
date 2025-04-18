@@ -250,6 +250,12 @@ nav ul li a:hover::after {
     align-items: center;
 }
 
+.logo-link img:hover {
+    transform: scale(1.1);
+    transition: transform var(--transition-speed) ease;
+    box-shadow: 0 5px 25px var(--shadow); 
+}
+
 #menu-toggle, .menu-toggle {
     display: none;
     cursor: pointer;
@@ -501,8 +507,8 @@ nav ul li a:hover::after {
   left: 6px;
   width: calc(100% - 12px);
   height: calc(100% - 12px);
-  max-width: 100%; /* Prevents overflow on small screens */
-  object-fit: cover; /* Maintains aspect ratio and fills container */
+  max-width: 100%; 
+  object-fit: cover; 
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -1193,7 +1199,7 @@ footer {
 
 
 .hexagon {
-    max-width: 300px; /* Maximum size needed */
+    max-width: 300px; /* maximum size needed */
 }
 
 .tech-icons {
@@ -1340,41 +1346,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-  
-
-  /* resposive typography 
-   .hero-info h2 {
-      font-size: 2.3rem;
-  }
-
-  .hero-info p {
-      font-size: 1rem;
-  }
-
-  .hero-info .btn {
-      font-size: 0.9rem;
-      padding: 10px 20px;
-  }
-
-  .tag {
-      font-size: 0.7rem;
-      padding: 5px 10px;
-  }
-
-  .card-description li {
-      font-size: 0.8rem;
-  }
-      
-  .skills-list li {
-    font-size: 0.9rem;
-    padding: 5px 0;
-}
-
-.skills-list li:before {
-    font-size: 1.2rem;
-    position: relative;
-}
-  */
   
 
   .skills-grid {
