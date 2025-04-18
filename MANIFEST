@@ -1,0 +1,58 @@
+ALL students complete this section:
+
+CHOICES
+(You are allowed to choose a feature for some of the requirements. Indicate on the line
+ which one you chose using the letter provided in the spec. Separate the letters with a comma
+ In some cases you will also need to tell us what you did)
+-------
+9a. Text gradients defined by var(--gradient-primary) were used on most headings of <section> elements (i.e. .section-title) and was also included in .emphasized. These gradients were made by clipping the    background into its corresponding text. 
+9b. clamp() was used to make responsive typography by setting font sizes of specific elements (e.g., html, h2, p, button a, .skills-grid li, h3, .emphasized, .output ).
+12. I used CSS gradients (var(--gradient-primary)) for backgrounds on section titles, the hexagon in my about section, and buttons; I also applied box-shadow and text-shadow on cards, the terminal in the hero section, and buttons to create depth; I also used CSS transforms (translateY) for hover interactions on .btn and .card; implemented gradient borders on skill-category elements using border-image. 
+18.
+19.
+
+JAVASCRIPT
+(Please tells us what the JavaScript does e.g. "click on the green button and it does the following...")
+----------
+1. Clicking the .menu-toggle element (i.e. hamburger menu) toggles the navigation menu by adding or removing the `active` class on the navbar / nav element and button. 
+2. Similar to the feature above, clicking the "Show More Experiences" button toggles the expanded experience section by adding or removing the `expanded` class. 
+3. 
+
+
+
+NOTES TO STAFF
+(If there is anything you need to tell us, please use the section below)
+---------------
+For requirement 13: I fulfilled this query in my "Skills" section where I used a CSS grid and two device breakpoints. By default, the CSS grid has 3 columns and 3 rows, with one of them having an element (i.e. the certificates list) that spans all a row at the same time. As the page shrinks, the columns and rows will decrease by 1 until it reaches the optimal mobile dimensions (i.e. max-width:468px), where it will only showcase 1 square at a time. 
+
+For requirement 15: I fulfilled this query by modifying an <a> element with class "logo-link", where I modified the block level display to become a flex display instead. 
+
+For requirement 20: I made it so that when a new visitor hovers over the contact or footer links, the text will display in the --text-muted color, and once they visit the links, the text will turn --text-muted, and when hovering on the visited link, the text will turn --terminal-green. Additionally, the links will perform the "jump" animation I created when hovered on. 
+
+
+ONLY modify this section if you implemented the requirements across 2 or more files.
+Otherwise, submit this file as is. PLEASE do not delete anything from this file.
+
+REQUIREMENT LOCATION
+(After the period, hit TAB and then enter the HTML page name where the requirement
+ was implemented)
+---------------------
+ 2.
+ 3.
+ 4.
+ 5.
+ 6.
+ 7.
+ 8.
+ 9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
