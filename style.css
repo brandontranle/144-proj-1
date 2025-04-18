@@ -76,8 +76,6 @@ h3 {
 
 main {
     padding-top: calc(var(--header-height) + 30px);
-    background-color: none;
-
 }
 
 body, header, footer {
@@ -126,7 +124,6 @@ body:has(.dark-mode-toggle:checked) {
 
 body {
     font-family: var(--font);
-    background-color: none;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -428,8 +425,8 @@ nav ul li a{
   }
   
   .output {
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     margin-top: 10px;
-    line-height: 1.4;
   }
   
   .container {
@@ -1161,16 +1158,16 @@ footer {
 
 
 /* req 20 */
-.contact-methods a:link:hover {
+.contact-methods a:link:hover, .footer-links a:link:hover {
   animation: jump 0.6s ease infinite;
   color: var(--text-muted);
 }
 
-.contact-methods a:visited {
+.contact-methods a:visited, .footer-links a:visited {
   transition: padding-left 0.2s ease;
   color: var(--text-muted);
 }
-.contact-methods a:visited:hover {
+.contact-methods a:visited:hover, .footer-links a:visited:hover {
   color: var(--terminal-green);
 }
 

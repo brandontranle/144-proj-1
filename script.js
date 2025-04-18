@@ -43,14 +43,22 @@ function loadTerminal() {
     //make up some commands
     const commands = [
       'whoami', //sick
-      'ls -la ./skills',
+      'ls -l ./skills',
       'cat about.md',
       'sudo ./welcome.sh'
     ];
     
     const outputs = [
-      'sample text here',
-    '', // maybe somethig like drwxr-xr-x python
+      "root - brandonle", // maybe something like root
+      `<pre>total 48
+      drwxr-xr-x  7 brandonle  224 Apr 17 10:00 .
+      drwxr-xr-x 14 brandonle  448 Apr 17 09:00 ..
+      -rw-r--r--  1 brandonle   32 Apr 10 12:00 javascript.skill
+      -rw-r--r--  1 brandonle   30 Apr 10 12:00 typescript.skill
+      -rw-r--r--  1 brandonle   28 Apr 10 12:00 python.skill
+      -rw-r--r--  1 brandonle   26 Apr 10 12:00 csharp.skill
+      -rw-r--r--  1 brandonle   24 Apr 10 12:00 php.skill
+    </pre>`,
       '# About Brandon<br><br>Security engineer and software developer with experience in vulnerability assessment, secure coding, and OWASP practices.',
       '👋 Welcome to my portfolio! Feel free to explore my projects and experience.'
     ];
