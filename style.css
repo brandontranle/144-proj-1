@@ -305,11 +305,9 @@ nav ul li a:hover::after {
     display: inline-block;
     padding: 6px 12px;
     background-color: rgba(139, 139, 139, 0.1);
-    color: var(--gradient-primary);
     font-weight: 700;
     border-radius: 50px;
     margin-bottom: 10px;
-    border: 1px solid var(--gradient-primary);
     font-family: var(--font-code);
   }
   
@@ -317,7 +315,6 @@ nav ul li a:hover::after {
     line-height: 1.1;
     margin-bottom: 20px;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
@@ -431,14 +428,12 @@ nav ul li a:hover::after {
   }
   
   .prompt {
-    color: var(--gradient-primary);
     margin-right: 8px;
   }
   
  
   
   .cursor {
-    color: var(--gradient-primary);
     animation: blink 1s step-end infinite;
     font-weight: bold;
     margin-left: 2px;
@@ -635,7 +630,6 @@ p > .emphasized {
     top: 0;
     width: 20px;
     height: 20px;
-    background-color: var(--gradient-primary);
     background-image: var(--gradient-primary);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--shadow);
@@ -663,7 +657,6 @@ p > .emphasized {
     margin-top: 0;
     margin-bottom: 10px;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
@@ -699,7 +692,6 @@ p > .emphasized {
     position: absolute;
     left: 0;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
@@ -806,7 +798,6 @@ p > .emphasized {
   margin-top: 0;
   margin-bottom: 15px;
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
@@ -829,11 +820,10 @@ p > .emphasized {
 }
 
 .skills-list li::before {
-  content: '﹥';
+  content: '>';
   position: absolute;
   left: 0;
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -857,7 +847,6 @@ p > .emphasized {
   position: absolute;
   left: 0;
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -1058,7 +1047,6 @@ p > .emphasized {
 
 .contact-info h3 {
   margin-bottom: 20px;
-  color: var(--gradient-primary);
 }
 
 .contact-methods {
@@ -1099,7 +1087,6 @@ legend {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--gradient-primary);
 }
 
 .form-group {
@@ -1281,7 +1268,7 @@ footer {
   }
 
   nav.active ul {
-    pointer-events: auto;
+    pointer-events: all; /* do not use auto to remove warning*/
     height: auto;
     overflow: visible;
   }
