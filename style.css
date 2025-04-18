@@ -1173,8 +1173,6 @@ footer {
   50%        { transform: translateY(-5px); }
 }
 
-
-
 @media (max-width: 480px) {
   .hexagon {
     max-width: 200px; 
@@ -1280,6 +1278,10 @@ footer {
   }
   .about-content p {
       text-align: center;
+  }
+
+  about-desc:nth-child(3) {
+      font-style: italic;
   }
 
   /* for experience section */
