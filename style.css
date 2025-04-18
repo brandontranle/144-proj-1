@@ -242,6 +242,14 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
 #menu-toggle, .menu-toggle {
     display: none;
     cursor: pointer;
